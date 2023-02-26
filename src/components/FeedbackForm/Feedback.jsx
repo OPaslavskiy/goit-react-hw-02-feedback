@@ -1,4 +1,4 @@
-import { firstLetterUp } from 'components/tools/FirstLetterUp';
+import { firstLetterUp } from 'tools/FirstLetterUp';
 import { Titel, ButtonDiv, Button } from './FeedbackForm.styled';
 import PropTypes from 'prop-types';
 

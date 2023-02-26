@@ -4,7 +4,7 @@ import { GlobalStyle } from 'GlobalStyle';
 import { Feedback } from './FeedbackForm/Feedback';
 import { Statistics } from './FeedbackForm/Statictics';
 
-export class FeedbackForm extends Component {
+export class App extends Component {
   state = {
     good: 0,
     neutral: 0,
