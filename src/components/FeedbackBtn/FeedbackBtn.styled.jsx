@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-
 export const Titel = styled.h2`
   color: #111111ce;
   text-align: center;
@@ -24,11 +23,4 @@ export const Button = styled.button`
   border-radius: 15px;
   width: 150px;
   padding: 10px;
-`;
-
-export const String = styled.p`
-  text-align: center;
-  margin-top: 5px;
-  margin-bottom: 5px;
-  font-weight: 300;
 `;

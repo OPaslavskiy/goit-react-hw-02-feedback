@@ -1,8 +1,8 @@
 import { firstLetterUp } from 'tools/FirstLetterUp';
-import { Titel, ButtonDiv, Button } from './FeedbackForm.styled';
+import { Titel, ButtonDiv, Button } from './FeedbackBtn.styled';
 import PropTypes from 'prop-types';
 
-export const Feedback = ({ state, addFeedBack }) => {
+export const FeedbackBtn = ({ state, addFeedBack }) => {
   const stateKeys = Object.keys(state);
   return (
     <>
@@ -18,7 +18,7 @@ export const Feedback = ({ state, addFeedBack }) => {
   );
 };
 
-Feedback.propTypes = {
+FeedbackBtn.propTypes = {
   state: PropTypes.object.isRequired,
   addFeedBack: PropTypes.func.isRequired,
 };

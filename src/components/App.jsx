@@ -1,8 +1,9 @@
 import { Component } from 'react';
 import { Layout } from '../Layout';
 import { GlobalStyle } from 'GlobalStyle';
-import { Feedback } from './FeedbackForm/Feedback';
-import { Statistics } from './FeedbackForm/Statictics';
+import { FeedbackBtn } from './FeedbackBtn/FeedbackBtn';
+import { Statistics } from './FeedbackStatistics/FeedbackStatistics';
+import { String } from './App.styled';
 
 export class App extends Component {
   state = {
@@ -34,12 +35,16 @@ export class App extends Component {
     return (
       <Layout>
         <GlobalStyle />
-        <Feedback state={this.state} addFeedBack={this.addFeedBack} />
-        <Statistics
-          state={this.state}
-          total={this.countTotalFeedback}
-          percentagePositive={this.countPositiveFeedbackPercentage}
-        />
+        <FeedbackBtn state={this.state} addFeedBack={this.addFeedBack} />
+        {this.countTotalFeedback() > 0 ? (
+          <Statistics
+            state={this.state}
+            total={this.countTotalFeedback}
+            percentagePositive={this.countPositiveFeedbackPercentage}
+          />
+        ) : (
+          <String>No feedback given</String>
+        )}
       </Layout>
     );
   }
